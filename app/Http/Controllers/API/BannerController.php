@@ -16,6 +16,6 @@ class BannerController extends Controller
         $banners = Banner::when($request->game_id, function ($q) use ($request) {
             return $q->where('game_id', $request->game_id);
         })->latest()->get();
-        return $this->success($banners, 'Banner List');
+        return $this->success($banners, 'Banner List!');
     }
 }
